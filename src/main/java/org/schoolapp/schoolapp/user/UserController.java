@@ -1,17 +1,32 @@
 package org.schoolapp.schoolapp.user;
 
-import lombok.*;
-import lombok.extern.slf4j.Slf4j;
-import lombok.extern.slf4j.XSlf4j;
-import org.slf4j.Logger;
-import org.springframework.http.HttpStatus;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.tags.UrlTag;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.json.JSONObject;
+import java.io.InputStream;
+import java.io.IOException;
+import java.util.Scanner;
+import org.json.JSONObject;
+import java.nio.file.Paths;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @Slf4j
@@ -25,6 +40,29 @@ public class UserController {
         log.info("Students {}", students);
         return ResponseEntity.ok().body(new ApiResponse<>(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), 2000, "Student List", students));
     }
+    
+    @GetMapping(value = "/getStudentInfo", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> getJsonFromFile() {
+        try {
+            // Change the file path to the actual path of your JSON file
+            String filePath = "/Users/harshakota/Desktop/WM/workspace/src/main/resources/student-sample.json";
+
+            Path path = Paths.get("src","main","resources","student-sample.json");
+            byte[] fileBytes = Files.readAllBytes(path);
+            String fileContent = new String(fileBytes);
+ 
+            // Parse the file content as a JSON object
+            JSONObject jsonObject = new JSONObject(fileContent);
+System.out.println(jsonObject);
+            // Create a ResponseEntity with the JSON object and OK status
+            return new ResponseEntity<>(jsonObject.toString(), HttpStatus.OK);
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.status(500).body("Error reading JSON file");
+        }
+    }
+
 
     @GetMapping("/")
     public String welcome() {

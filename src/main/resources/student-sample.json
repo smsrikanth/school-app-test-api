@@ -1,0 +1,45 @@
+{
+  "resourceInfo": {
+    "personalInfo": {
+      "rFirstName": "Sai Kiran",
+      "rLastName": "Swarna",
+      "rPrimaryImage": "/content/dam/primary/image1.jpg",
+      "rClass": "V",
+      "rSection": "B",
+      "rProgressPercent": "32"
+    },
+    "academicInfo": {
+      "attendancePercentage": "95",
+      "progressInfo": [
+        {
+          "subjectKey": "Telugu",
+          "subjectLabel": "92"
+        },
+        {
+          "subjectKey": "English",
+          "subjectLabel": "95"
+        }
+      ],
+      "examSchedule": [
+        {
+          "subjectlabel": "English",
+          "subjectDescription": "Unit test on Feb 24th on two chapters.",
+          "subjectUniqueId": "93eaeacb-b3a7-4fb8-b8ce-4c16f6594435"
+        },
+        {
+          "subjectlabel": "Science",
+          "subjectDescription": "Unit test on Feb 26th on two chapters.",
+          "subjectUniqueId": "8e77e482-0abf-49df-bb9d-76f19e7b6691"
+        }
+      ]
+    },
+    "taskInfo": [
+      {
+        "startDate": "08/16/2023",
+        "endDate": "08/26/2023",
+        "taskDescription": "School is going on day trip to Park.Please send extra clothes and towel.",
+        "taskUniqueId": "11e6c04f-0e2a-40b3-9132-2e982cfaef33"
+        }
+    ]
+  }
+}

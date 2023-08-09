@@ -10,5 +10,6 @@ public class SchoolAppApplication {
         System.out.println("Test");
         SpringApplication.run(SchoolAppApplication.class, args);
     }
+    
 
 }
