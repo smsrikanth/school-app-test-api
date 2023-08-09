@@ -66,7 +66,7 @@ System.out.println(jsonObject);
 
     @GetMapping("/")
     public String welcome() {
-        return "Hello Welcome";
+        return "Hello WelcomeHK";
     }
 }
 
