@@ -8,7 +8,7 @@ start() {
     if [ -f "$PID_FILE" ]; then
         echo "The application is already running. PID: $(cat $PID_FILE)"
     else
-        nohup java -jar $APP_NAME >> $LOG_FILE 2>&1 &
+        nohup java -jar -Dserver.port=9091 $APP_NAME >> $LOG_FILE 2>&1 &
         echo $! > $PID_FILE
         echo "Application started. PID: $(cat $PID_FILE)"
     fi
