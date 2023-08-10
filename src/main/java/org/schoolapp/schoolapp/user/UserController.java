@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -42,12 +43,15 @@ public class UserController {
     }
     
     @GetMapping(value = "/getStudentInfo", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> getJsonFromFile() {
+    public ResponseEntity<String> getJsonFromFile(@RequestParam(name = "uniqueId") String uniqueId) {
         try {
+        	System.out.println("----------------"+uniqueId);
             // Change the file path to the actual path of your JSON file
-            String filePath = "/Users/harshakota/Desktop/WM/workspace/src/main/resources/student-sample.json";
-
-            Path path = Paths.get("src","main","resources","student-sample.json");
+            String filePath = "/Users/harshakota/Desktop/WM/workspace/src/main/resources/"+ uniqueId +".json";
+            
+            System.out.println("----------------"+filePath);
+            
+            Path path = Paths.get("src","main","resources",uniqueId+".json");
             byte[] fileBytes = Files.readAllBytes(path);
             String fileContent = new String(fileBytes);
  
