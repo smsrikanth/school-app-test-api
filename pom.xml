@@ -61,14 +61,11 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		  <resources>
-        <resource>
-            <directory>src/main/resources</directory>
-            <includes>
-                <include>**/*.json</include>
-            </includes>
-            </resource>
-    </resources>
+		<resources>
+			<resource> 
+				<directory>src/main/resources</directory>
+            </resource> 
+		</resources>
 	</build>
 
 </project>
