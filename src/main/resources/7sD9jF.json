@@ -1,11 +1,11 @@
 {
   "resourceInfo": {
     "personalInfo": {
-      "rFirstName": "Sai Kiran",
-      "rLastName": "Swarnas",
+      "rFirstName": "Harvey",
+      "rLastName": "Specter",
       "rPrimaryImage": "/content/dam/primary/image1.jpg",
       "rClass": "V",
-      "dateofBirth": "26/8/2008",
+      "dateofBirth": "26/11/2008",
       "rSection": "B",
       "rProgressPercent": "32"
     },
@@ -18,7 +18,7 @@
         },
         {
           "subjectKey": "English",
-          "subjectLabel": "95"
+          "subjectLabel": "96"
         }
       ],
       "examSchedule": [
