@@ -19,6 +19,18 @@
         {
           "subjectKey": "English",
           "subjectLabel": "96"
+        },
+        {
+          "subjectKey": "Maths",
+          "subjectLabel": "99"
+        },
+        {
+          "subjectKey": "Science",
+          "subjectLabel": "76"
+        },
+        {
+          "subjectKey": "Social",
+          "subjectLabel": "64"
         }
       ],
       "examSchedule": [
