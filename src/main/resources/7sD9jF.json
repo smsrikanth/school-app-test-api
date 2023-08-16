@@ -7,7 +7,7 @@
       "rClass": "V",
       "dateofBirth": "26/11/2008",
       "rSection": "B",
-      "rProgressPercent": "35"
+      "rProgressPercent": "32"
     },
     "academicInfo": {
       "attendancePercentage": "95",
@@ -30,12 +30,12 @@
         },
         {
           "subjectKey": "Social",
-          "subjectLabel": "64"
+          "subjectLabel": "6"
         }
       ],
       "examSchedule": [
         {
-          "subjectlabel": "English",
+          "subjectlabel": "Maths",
           "subjectDescription": "Unit test on Feb 24th on two chapters.",
           "subjectUniqueId": "93eaeacb-b3a7-4fb8-b8ce-4c16f6594435"
         },
